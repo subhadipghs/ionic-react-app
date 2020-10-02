@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  IonContent,  
+  IonContent,
   IonHeader,
   IonPage,
   IonTitle,
@@ -11,12 +11,11 @@ import { Plugins } from "@capacitor/core";
 const { Geolocation } = Plugins;
 
 /**
-  * a text component 
-*/
+ * a text component
+ */
 const Text: React.FC<{ children?: React.ReactChild }> = ({ children }) => (
   <div className="text">{children}</div>
 );
-
 
 // sample image with geotag
 const imagePath: string =
@@ -35,24 +34,23 @@ export const Home: React.FC = () => {
     const { latitude, longitude } = position.coords;
     setState({
       latitude: latitude,
-      longitude: longitude
-    })
+      longitude: longitude,
+    });
   };
 
   React.useEffect(() => {
-    setLocation(setPos)
+    setLocation(setPos);
   }, [pos]);
 
-
   return (
-    <IonPage>
+    <>
       <IonHeader>
         <IonToolbar>
           <IonTitle>Image with EXIF data</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>{JSON.stringify(pos, null, 2)}</IonContent>
-    </IonPage>
+    </>
   );
 };
 
