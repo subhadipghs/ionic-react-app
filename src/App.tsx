@@ -1,16 +1,7 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 import {
   IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs
 } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import {images} from 'ionicons/icons';
 import Home from './pages/Home';
 
 /* Core CSS required for Ionic components to work properly */
@@ -33,6 +24,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 const App: React.FC = () => (
+
   <IonApp>
     <Home />
   </IonApp>
