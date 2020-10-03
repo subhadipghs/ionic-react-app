@@ -6,47 +6,28 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { Plugins } from "@capacitor/core";
 
-const { Geolocation } = Plugins;
-
-/**
- * a text component
- */
-const Text: React.FC<{ children?: React.ReactChild }> = ({ children }) => (
-  <div className="text">{children}</div>
-);
-
-// sample image with geotag
-const imagePath: string =
-  "https://www.geoimgr.com/images/samples/england-london-bridge-225.jpg";
+import { useWatchPosition } from "@ionic/react-hooks/geolocation";
 
 export const Home: React.FC = () => {
   const [pos, setPos] = React.useState<object>({});
-
-  /*
-    set the location state
-    @param {function} setState which set the state based on location
-    @return {null}
-  */
-  const setLocation = async (setState: (obj: object) => void) => {
-    const position = await Geolocation.getCurrentPosition();
-    const { latitude, longitude } = position.coords;
-    setState({
-      latitude: latitude,
-      longitude: longitude,
-    });
-  };
+  /** Using the ionic/react-hooks for plugins  */
+  const { currentPosition, startWatch, clearWatch } = useWatchPosition();
 
   React.useEffect(() => {
-    setLocation(setPos);
-  }, [pos]);
+    startWatch();
+    setPos({
+      latitude: currentPosition?.coords.latitude,
+      longitude: currentPosition?.coords.longitude,
+    });
+    return () => clearWatch();
+  }, [currentPosition]);
 
   return (
     <>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Image with EXIF data</IonTitle>
+          <IonTitle>Geolocation React</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>{JSON.stringify(pos, null, 2)}</IonContent>

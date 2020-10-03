@@ -1169,6 +1169,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@capacitor-community/react-hooks@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@capacitor-community/react-hooks/-/react-hooks-0.0.11.tgz#6ac0889d888e1ff3659e32d63e2d8bbc08312771"
+  integrity sha512-cDxzGQLTbWV91uw87DipG8Z3wz6JuEZPIQ22OTU2BaNEWd+nk71+fXv8OmUShbzzZTqFEIyRQjd7V9s24mQXJg==
+
 "@capacitor/android@2.4.2":
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-2.4.2.tgz#ddc55bf0ea78214a0a760330a439916093792d00"
@@ -1247,6 +1252,34 @@
   integrity sha512-tAag0jEcjwH+P2quUfipd7liWCNX2F8NvYjQp2wtInsZxnMlypdw0FtAOLxtvvkO+GSRRbmNi8m/5y42PQJYCQ==
   dependencies:
     "@hapi/hoek" "^8.3.0"
+
+"@ionic-native/background-geolocation@^5.28.0":
+  version "5.28.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/background-geolocation/-/background-geolocation-5.28.0.tgz#3c09116a1828a99602785f67f648f89f3450f934"
+  integrity sha512-HzhwJehSbzIWMu0UQlxjePToYHa2Q6Pa/I0ycB7uSxiDqA8Z5EvsuSSH1mBq4lNuWeMiuZScpePiwJcake2/ow==
+  dependencies:
+    "@types/cordova" latest
+
+"@ionic-native/core@^5.28.0":
+  version "5.28.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/core/-/core-5.28.0.tgz#9fdbc3657d778c4c524c7091e6f0c8e4426bcd28"
+  integrity sha512-YmR70U+bIk1e4V36bke8HCol2XwuplAr4OTok4Jdx6MaAfJ1xR1AWt2PiQOIgM8bAq8qkVlbgsYi2rEOzKVc7A==
+  dependencies:
+    "@types/cordova" latest
+
+"@ionic-native/gao-de-location@^5.28.0":
+  version "5.28.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/gao-de-location/-/gao-de-location-5.28.0.tgz#78e904db2fc817d4a3bc5f0ab140b2e4df0f06d3"
+  integrity sha512-CZoj9fRco0v0swfmUExt+f6uRuY+ISfgQTPwK99zTT/AafzoTYqs/RSk3ZMwpNCOjHuIWxKRmU/Zy7mUWN0vng==
+  dependencies:
+    "@types/cordova" latest
+
+"@ionic-native/geolocation@^5.28.0":
+  version "5.28.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/geolocation/-/geolocation-5.28.0.tgz#865cc3280cd2ef3d1ebdbb9ce46f17e33eed6dbf"
+  integrity sha512-SwzZdLhcX8aZ2oV5yInGDaCYkTV/bQMPuv5Ug1HC6kPj11BnMmHWcHdhIpXaxBYz5rtadkZJEsJRmWnFnBE3YQ==
+  dependencies:
+    "@types/cordova" latest
 
 "@ionic/core@5.3.4":
   version "5.3.4"
@@ -1450,6 +1483,11 @@
     "@types/node" "*"
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
+
+"@mauron85/cordova-plugin-background-geolocation@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@mauron85/cordova-plugin-background-geolocation/-/cordova-plugin-background-geolocation-3.1.0.tgz#137d6c7554eb09a470623e23b7cbd68c95a55d8d"
+  integrity sha512-ZZDwkO5m0Bbi8VDJsO3ssBgXrgCiu43/kOBvSneh5djIFyRrQZJbj6IMNt/hP7F/m7Pmw0x7F5ASXjPMwjEAjg==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -1669,6 +1707,11 @@
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
+
+"@types/cordova@latest":
+  version "0.0.34"
+  resolved "https://registry.yarnpkg.com/@types/cordova/-/cordova-0.0.34.tgz#ea7addf74ecec3d7629827a0c39e2c9addc73d04"
+  integrity sha1-6nrd907Ow9dimCegw54smt3HPQQ=
 
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
@@ -3405,6 +3448,16 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
+
+cordova-plugin-gaodelocation-chenyu@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-gaodelocation-chenyu/-/cordova-plugin-gaodelocation-chenyu-2.0.5.tgz#49900df3840c82dba4cc60d42acaa1dd15c4349b"
+  integrity sha512-4rpVOKP58TUWCkWojEKMfLyP1+AsXKbSzp8A/vF2x1ZcJvAlAE0rFQJDtPZabbEwPZIYkL5Y7QZF9y7kCe9jYQ==
+
+cordova-plugin-geolocation@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-geolocation/-/cordova-plugin-geolocation-4.0.2.tgz#4668a01ae8a49e27c5515f8b81880983e96d7eb3"
+  integrity sha512-QGThnPKzPxESHkruZlpE0+5aFBVOet8al0vIJ7laSUOQHIC1dd/JY6peVIbtLboKi5Dap1wCKRubOqPqH8xcQA==
 
 core-js-compat@^3.6.2:
   version "3.6.5"
