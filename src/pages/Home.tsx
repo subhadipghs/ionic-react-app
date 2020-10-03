@@ -11,6 +11,7 @@ import { useWatchPosition } from "@ionic/react-hooks/geolocation";
 
 export const Home: React.FC = () => {
   const [pos, setPos] = React.useState<object>({});
+  /** Using the ionic/react-hooks for plugins  */
   const { currentPosition, startWatch, clearWatch } = useWatchPosition();
 
   React.useEffect(() => {
