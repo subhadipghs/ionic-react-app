@@ -1,8 +1,24 @@
 import React from 'react';
 import {
   IonApp,
+  IonIcon,
+  IonLabel,
+  IonRouterOutlet,
+  IonTabBar,
+  IonTabButton,
+  IonTabs
 } from '@ionic/react';
+
+import { IonReactRouter } from '@ionic/react-router'
+
+/**  all the pages */
 import Home from './pages/Home';
+import Image from './pages/Image';
+import PhotoPage from './pages/PhotoPage'
+/** icons */
+import {homeOutline, images} from 'ionicons/icons'
+
+import { Route } from 'react-router-dom'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -19,15 +35,34 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
-
 /* Theme variables */
 import './theme/variables.css';
 
-const App: React.FC = () => (
 
-  <IonApp>
-    <Home />
-  </IonApp>
-);
+const App1: React.FC = () => {
+  return (
+    <IonApp>
+      <IonReactRouter>
+      <IonTabs>
+        <IonRouterOutlet>
+          <Route path="/" component={Image} exact={true} />
+          <Route path="/home" component={Home} exact={true} />
+          <Route path="/photos" component={PhotoPage} />
+        </IonRouterOutlet>
+        <IonTabBar slot="bottom">
+          <IonTabButton tab="tab1" href="/home">
+            <IonIcon icon={homeOutline} />
+            <IonLabel>Home</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab2" href="/photos">
+            <IonIcon icon={images} />
+            <IonLabel>Photos</IonLabel>
+          </IonTabButton>
+        </IonTabBar>
+      </IonTabs>
+    </IonReactRouter>
+    </IonApp>
+  );
+}
 
-export default App;
+export default App1;
