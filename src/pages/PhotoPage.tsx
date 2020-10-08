@@ -19,7 +19,12 @@ import { camera, close, trash } from 'ionicons/icons'
 
 
 const PhotoPage : React.FC = () => {
-  const { photos, takePhoto, locations, deletePhoto} = usePhoto();
+  const {photos, takePhoto, locations, deletePhoto} = usePhoto();
+
+  function takePicture() {
+    takePhoto();
+  }
+
   return (
     <IonPage>
       <IonHeader>
@@ -40,7 +45,7 @@ const PhotoPage : React.FC = () => {
         </IonGrid>
         <IonFab vertical="bottom" horizontal="center" slot="fixed">
           <IonFabButton
-            onClick={() => takePhoto()}
+            onClick={() => takePicture()}
           >
             <IonIcon icon={camera}></IonIcon>
           </IonFabButton>

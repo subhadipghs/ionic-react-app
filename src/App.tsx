@@ -14,9 +14,10 @@ import { IonReactRouter } from '@ionic/react-router'
 /**  all the pages */
 import Home from './pages/Home';
 import Image from './pages/Image';
-import PhotoPage from './pages/PhotoPage'
+import PhotoPage from './pages/PhotoPage';
+import UploadImage from './pages/UploadImage';
 /** icons */
-import {homeOutline, images} from 'ionicons/icons'
+import {homeOutline, images, cameraSharp} from 'ionicons/icons'
 
 import { Route } from 'react-router-dom'
 
@@ -48,6 +49,7 @@ const App1: React.FC = () => {
           <Route path="/" component={Image} exact={true} />
           <Route path="/home" component={Home} exact={true} />
           <Route path="/photos" component={PhotoPage} />
+          <Route path="/upload-image" component={UploadImage} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/home">
@@ -57,6 +59,10 @@ const App1: React.FC = () => {
           <IonTabButton tab="tab2" href="/photos">
             <IonIcon icon={images} />
             <IonLabel>Photos</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab3" href="/upload-image">
+            <IonIcon icon={cameraSharp} />
+            <IonLabel>Upload Image</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

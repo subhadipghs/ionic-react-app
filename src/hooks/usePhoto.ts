@@ -48,7 +48,7 @@ export function usePhoto() {
         console.log(error);
       }
     };  
-    loadSaved();
+    // loadSaved();
   }, [get, readFile]);
 
 
@@ -90,18 +90,15 @@ export function usePhoto() {
         quality: 100
       });
       const fileName = new Date().getTime() + '.jpeg';
-      // get the locations 
-      const { longitude, latitude } = await getLocation();
-      console.log({longitude, latitude});
 
       const savedFileImage = await savePicture(cameraPhoto, fileName);
-      const newPhotos = [savedFileImage, ...photos];
+      console.log(savedFileImage);
+      const newPhotos = [savedFileImage];
       setPhotos(newPhotos);
-
-      const newLocations = [{ latitude: latitude, longitude: longitude }, ...locations];
-      setLocations(newLocations);
-      writeLocationsOnFile(newLocations);
       set(PHOTO_STORAGE, JSON.stringify(newPhotos));
+      const photoDetails: Array<any> = [savedFileImage, fileName];
+      return photoDetails;
+
     } catch(error) {
       console.log(error);
     }
